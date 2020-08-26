@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-const schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-const Task = new schema(
+const Task = new Schema(
   {
     name: { type: String, required: true },
     dueDate: { type: Number, required: true},
-    frequency: { type: Number, required: false},
+    frequency: { type: Number, required: true},
   },
   { timestamps: true },
 );

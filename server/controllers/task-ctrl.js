@@ -18,6 +18,7 @@ createTask = (req, res) => {
     return res.status(400).json({success: false, error: err});
   }
 
+
   task
     .save()
     .then(() => {
@@ -91,7 +92,7 @@ deleteTask = async (req, res) => {
       });
     }
 
-    return res.status(200).json({ sucess: true, data: movie });
+    return res.status(200).json({ sucess: true, data: task });
   }).catch(err => console.log(err));
 }
 
@@ -120,7 +121,7 @@ getTasks = async (req, res) => {
 
     if (!tasks.length)
     {
-      return res.status(404).json({ sucess: false, error: 'Task not found'});
+      return res.status(404).json({ sucess: false, error: 'Task list empty'});
     }
 
     return res.status(200).json({ sucess: true, data: tasks});

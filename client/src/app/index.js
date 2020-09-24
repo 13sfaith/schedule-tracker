@@ -11,9 +11,9 @@ function App() {
     <Router>
       <NavBar />
       <Switch>
-	<Route path = "/tasks/list" exact component={TasksList} />
-	<Route path = "/tasks/create" exact component={TasksInsert} />
-	<Route path = "/tasks/update/:id" exact component={TasksUpdate} />
+	       <Route path = "/tasks/list" exact component={TasksList} />
+	       <Route path = "/tasks/create" exact component={TasksInsert} />
+	       <Route path = "/tasks/update/:id" exact component={TasksUpdate} />
       </Switch>
     </Router>
   );

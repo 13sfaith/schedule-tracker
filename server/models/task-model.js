@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 const Task = new Schema(
   {
     name: { type: String, required: true },
-    dueDate: { type: Number, required: true},
-    frequency: { type: Number, required: true},
+    totalDays: { type: Number, required: true},
+    daysAchieved: { type: [Number], required: true},
   },
   { timestamps: true },
 );
